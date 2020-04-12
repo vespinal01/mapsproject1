@@ -16,7 +16,7 @@ body {
     z-index: 100;
     font-size: 88px;
     font-weight: bold;
-    color: #101442;
+    color: #d2d4ef;
     text-transform: uppercase;
     top: 100px;
     left: 100px;
@@ -30,7 +30,7 @@ body {
     left: 100px;
     width: 400px;
     height: 60px;
-    background-color: #0c2f42;
+    background-color: #8fc5e2;
     display: flex;
 }
 
