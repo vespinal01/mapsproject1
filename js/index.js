@@ -18,6 +18,7 @@ function initMap() {
       zoom: 10,
       mapTypeId: 'roadmap',
 
+      /* Format Map */
       styles: [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -212,12 +213,13 @@ function createMarker(latlng, name, address, index, phoneNumber, openStatusText)
     
     //"<b>" + name + "</b> <br/>"+ openStatusText + "<br/>" + address + "<br/>" + phoneNumber;
 
+    /* Show infoWindow */
     var marker = new google.maps.Marker({
       map: map,
       position: latlng,
       label: index.toString()
     });
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'mouseover', function() {
       infoWindow.setContent(html);
       infoWindow.open(map, marker);
     });
