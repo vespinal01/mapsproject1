@@ -18,7 +18,7 @@ function initMap() {
       zoom: 10,
       mapTypeId: 'roadmap',
 
-      /* Format Map */
+      /********* Format Map ******/
       styles: [
         {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -99,6 +99,7 @@ function initMap() {
           stylers: [{color: '#17263c'}]
         }
       ]
+      /********* Format Map ******/
       
     });
     infoWindow = new google.maps.InfoWindow();
@@ -200,7 +201,7 @@ function createMarker(latlng, name, address, index, phoneNumber, openStatusText)
                 <div class="circle">
                     <i class="fas fa-location-arrow"></i>
                 </div>
-                ${address}
+                <a href="https://www.google.com/maps/search/?api=1&query=${latlng}">${address}</a>
             </div>
             <div class="store-info-phone">
                 <div class="circle">
@@ -210,7 +211,8 @@ function createMarker(latlng, name, address, index, phoneNumber, openStatusText)
             </div>
         </div>
     `
-    
+    //<div class="store-info-phone"> ${latlng} </div>
+
     //"<b>" + name + "</b> <br/>"+ openStatusText + "<br/>" + address + "<br/>" + phoneNumber;
 
     /* Show infoWindow */
